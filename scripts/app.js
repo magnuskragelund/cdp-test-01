@@ -6,4 +6,13 @@ var appInsights = window.appInsights || function (config) {
     instrumentationKey: "c3e291a5-1e64-42f9-aae0-1421afb145c4"
 });
 
-appInsights.trackEvent({ name: "myCustomEvent", properties: { customProperty1: "customValue1", customProperty2: "customValue2" } });
+let testCustomEvent = { 
+    name: "myCustomEvent", 
+    user_Id: "preben-01",
+    properties: { 
+        customProperty1: "customValue1", 
+        customProperty2: "customValue2" 
+    } 
+}
+
+appInsights.trackEvent(testCustomEvent);
